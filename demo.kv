@@ -1,0 +1,52 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+<Home>:
+    RelativeLayout:
+        id: navbar
+        y: root.top - self.height
+        size_hint_y: 0.07
+        canvas:
+            Color:
+                rgba: get_color_from_hex("#361D37")
+            Rectangle:
+                size: root.size
+                pos: root.pos
+        MDIconButton:
+            pos_hint: {'x':0.2}
+            icon: "arrow-left"
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+        MDIconButton:
+            pos_hint: {'x':0.25}
+            icon: "arrow-right"
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+    MDBoxLayout:
+        top: root.top - navbar.height - 0.2
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint_x: 0.35
+            canvas.before:
+                Color:
+                    rgba: get_color_from_hex("#3F0E40")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            canvas:
+                Color:
+                    rgba: get_color_from_hex("#FFFFFF")
+                Line:
+                    points: 0.2*self.width,self.top, 0.2*self.width,self.y
+                    width: 0.13
+                Line:
+                    points: 0.2*self.width,self.top-50, self.width,self.top-50
+                    width: 0.13
+                Line:
+                    points: 0.2*self.width, 0.07*self.height, self.width,0.07*self.height
+                    width: 0.13
+        MDBoxLayout:
+            orientation: "vertical"
+
+            
