@@ -11,6 +11,7 @@ class Home(MDFloatLayout):
 class DemoApp(MDApp):
 
     def build(self):
+        self.theme_cls.primary_palette = "Gray"
         return Home()
 
 

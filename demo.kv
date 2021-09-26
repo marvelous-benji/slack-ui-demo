@@ -12,17 +12,32 @@
                 size: root.size
                 pos: root.pos
         MDIconButton:
-            pos_hint: {'x':0.2}
+            pos_hint: {'x':0.16}
             icon: "arrow-left"
             user_font_size: "20sp"
             theme_text_color: "Custom"
-            text_color: 1,1,1,1
+            text_color: 1,1,1,0.9
         MDIconButton:
-            pos_hint: {'x':0.25}
+            pos_hint: {'x':0.19}
             icon: "arrow-right"
             user_font_size: "20sp"
             theme_text_color: "Custom"
-            text_color: 1,1,1,1
+            text_color: 1,1,1,0.65
+        MDIconButton:
+            pos_hint: {'x':0.22}
+            icon: "clock-time-three-outline"
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: 1,1,1,0.9
+        MDTextFieldRect:
+            pos_hint: {'x':0.26,'center_y':0.45}
+            size_hint: 0.5,None
+            height: "29dp"
+            line_anim: False
+            background_color: 1,1,1,0.3
+            hint_text: "Search Lungutech"
+            hint_text_color:1,1,1,1
+
     MDBoxLayout:
         top: root.top - navbar.height - 0.2
         MDBoxLayout:
